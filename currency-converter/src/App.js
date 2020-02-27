@@ -2,9 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import CurrencyRow from "./CurrencyRow";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const BASE_URL = "https://api.exchangeratesapi.io/latest";
 
 function App() {
+
+  toast.configure()
 
   const [currencyOptions, setCurrencyOptions] = useState([])
   //console.log(currencyOptions)
@@ -17,6 +22,18 @@ function App() {
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
 
   let toAmount, fromAmount
+
+  const notify = (e) => {
+    console.log('notified called')
+    toast('🦄 Wow so easy!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    });
+  }
 
   if (amountInFromCurrency) {
     fromAmount = amount;
@@ -47,6 +64,7 @@ function App() {
   }, [toCurrency, fromCurrency])
 
   useEffect(() => {
+    notify()
     // Make an API call to the base url and fetch data. 
     fetch(BASE_URL)
       .then(res => res.json())
@@ -76,6 +94,7 @@ function App() {
         amount={toAmount}
         onChangeAmount={handleAmountToChange}
       />
+      <button onClick={notify}>Notify !</button>
     </>
   );
 }
