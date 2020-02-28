@@ -3,7 +3,7 @@ import './App.css';
 
 function Shop() {
 
-    // API Currently not working. 
+    // API Currently not working. Ca
     // const [items, setItems] = useState([]);
 
     // useEffect(() => {
