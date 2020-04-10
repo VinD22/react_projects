@@ -1,0 +1,56 @@
+/* Non Grid Layout Here */
+
+@media (grid: 0) { /* For browsers supporting Grid Layout ( 90% does ) */
+
+  /* MOBILE Design Grid Layout Here */
+
+  @media (min-width: 768px) {
+    .container {
+      background-color: aquamarine;
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      grid-template: 2fr 10fr 1fr / 1fr 4fr; 
+      gap: 10px; 
+      grid-template-areas: 
+      "logo header"
+      "nav content"
+      "footer footer"
+      ;
+    }
+    
+    .logo {
+      background-color: aliceblue; 
+      grid-area: logo;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    .header {
+      background-color: blanchedalmond;  
+      grid-area: header;
+    }
+    
+    .nav {
+      background-color: goldenrod; 
+      grid-area: nav;
+    }
+    
+    .content {
+      background-color: greenyellow; 
+      grid-area: content;
+    }
+    
+    .footer {
+      background-color: darkcyan;
+      grid-area: footer
+    }
+  }
+  
+  
+  
+  
+}
