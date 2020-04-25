@@ -28,7 +28,14 @@ function App() {
 
   return (
     <div className="App">
-      {advice}
+      <div className="card">
+        <h1 className="heading">
+          {advice}
+        </h1>
+        <button className="button" onClick={fetchAdvice}>
+          <span>Ask for Advice!</span>
+        </button>
+      </div>
     </div>
   );
 }
