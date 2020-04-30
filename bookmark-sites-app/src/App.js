@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from "./logo.svg";
 import './App.css';
+import LinkCard from "./components /LinkCard";
 
 function App() {
 
-  const linkImageStyle = {
-    backgroundImage: logo
+  const [cardData, setCardData] = useState([{ linkName: "my link", linkHref: "https://google.com" }]);
+
+  const [newCard, setNewCard] = useState({ linkName: '', linkHref: '' })
+
+
+
+  const dispatchCardSet = (payload) => {
+    let oldArray = cardData;
+    let newArray = [...oldArray, payload];
+    setCardData(newArray);
+    setNewCard({ linkName: '', linkHref: '' })
   }
 
   return (
     <>
       <nav className="navigation">
-        <a><img src={logo} height="50px" width="50px" /></a>
+        <a><img src={logo} height="50px" /></a>
         <ul>
           <li>Home</li>
         </ul>
@@ -19,7 +29,7 @@ function App() {
       <main>
         <div className="leftContent">
           <img src={logo} height="150px" width="150px" />
-          <form>
+          <form onSubmit={e => e.preventDefault()}>
             <h2 className="formTitle">
               Add a bookmark
             </h2>
@@ -29,6 +39,8 @@ function App() {
                 className="formLabel">Write Bookmark Name</label>
 
               <input
+                value={newCard.linkName}
+                onChange={e => setNewCard({ ...newCard, linkName: e.target.value })}
                 type="text"
                 name="linkTitle"
                 minLength="1"
@@ -43,6 +55,8 @@ function App() {
                 className="formLabel">Enter Website Address</label>
 
               <input
+                value={newCard.linkHref}
+                onChange={e => setNewCard({ ...newCard, linkHref: e.target.value })}
                 type="text"
                 name="linkHref"
                 minLength="7"
@@ -52,16 +66,13 @@ function App() {
 
 
             </div>
-            <button>
+            <button onClick={() => dispatchCardSet(newCard)}>
               Add
             </button>
           </form>
         </div>
         <div className="rightContent">
-          <div stlye={linkImageStyle} />
-          <div>
-            <h2><a href="#">My Link</a></h2>
-          </div>
+          <LinkCard cards={cardData} />
         </div>
       </main>
     </>
