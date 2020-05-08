@@ -1,18 +1,36 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from "../context/GlobalState";
+import IncomeTransaction from './IncomeTransaction';
 
 const Balance = () => {
+
+    const { incomeTransactions, expenseTransactions } = useContext(GlobalContext);
+
+    const incomeAmounts = incomeTransactions.map(
+        incomeTransaction => incomeTransaction.incomeAmount
+    )
+
+    const expenseAmounts = expenseTransactions.map(
+        expenseTransaction => expenseTransaction.expenseAmount
+    )
+
+    const totalIncome = incomeAmounts.reduce((acc, item) => (acc += item), 0)
+    const totalExpense = expenseAmounts.reduce((acc, item) => (acc += item), 0)
+
+
+
     return (
         <div className="balance">
             <h2>Balance</h2>
-            <h3>$100.00</h3>
+            <h3>${totalIncome - totalExpense}</h3>
             <div className="income-expense">
                 <div className="plus">
                     <h3>Income</h3>
-                    <p>+$0.0</p>
+                    <p>+${totalIncome}</p>
                 </div>
                 <div className="minus">
                     <h3>Expenses</h3>
-                    <p>-$0.0</p>
+                    <p>-${totalExpense}</p>
                 </div>
 
             </div>

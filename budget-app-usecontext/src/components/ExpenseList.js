@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from "../context/GlobalState";
+import ExpenseTransaction from "./ExpenseTransaction";
 
 const Expenselist = () => {
 
@@ -13,11 +14,7 @@ const Expenselist = () => {
 
                 {expenseTransactions.map((expenseTransaction, i) => {
                     return (
-                        <li className="transaction" key={i}>
-                            <span className="transaction-text">{expenseTransaction.incomeText}</span>
-                            <span className="transaction-amount">${expenseTransaction.incomeAmount}</span>
-                            <button className="delete-btn">X</button>
-                        </li>
+                        <ExpenseTransaction key={i} expenseTransaction={expenseTransaction} />
                     )
                 })}
             </ul>

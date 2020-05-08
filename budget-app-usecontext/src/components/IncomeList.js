@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from "../context/GlobalState";
+import IncomeTransaction from './IncomeTransaction';
 
 const IncomeList = () => {
 
@@ -12,11 +13,7 @@ const IncomeList = () => {
             <ul className="transaction-list">
                 {incomeTransactions.map((incomeTransaction, i) => {
                     return (
-                        <li className="transaction" key={i}>
-                            <span className="transaction-text">{incomeTransaction.incomeText}</span>
-                            <span className="transaction-amount">${incomeTransaction.incomeAmount}</span>
-                            <button className="delete-btn">X</button>
-                        </li>
+                        <IncomeTransaction key={i} incomeTransaction={incomeTransaction} />
                     )
                 })}
             </ul>
