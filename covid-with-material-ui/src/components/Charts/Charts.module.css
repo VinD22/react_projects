@@ -1,0 +1,18 @@
+body { 
+    color: white;
+}
+
+.container { 
+    display: flex; 
+    justfityContent: center; 
+    width: 85%; 
+}
+
+
+@media(max-width: 770px) { 
+    
+    .container { 
+        width: 95%
+    }
+ 
+ } 
