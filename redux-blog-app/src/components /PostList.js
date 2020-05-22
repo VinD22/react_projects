@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { PostDetail } from './PostDetail'
+import React from 'react'
+import PostDetail from './PostDetail'
 import { connect } from 'react-redux'
 
 const PostList = (props) => {
