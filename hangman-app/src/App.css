@@ -1,0 +1,8 @@
+
+.App {
+  margin: 0;
+  padding: 0;
+  background:linear-gradient(90deg, rgb(176, 214, 191) 0%, rgb(105, 32, 32) 50%, rgb(148, 118, 76) 100%);
+  text-align: center;
+}
+
