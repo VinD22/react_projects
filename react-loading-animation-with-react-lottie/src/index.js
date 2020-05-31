@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import LeafletExample from './LeafletExample';
+import { Stopwatch } from './Stopwatch';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LeafletExample />
+    <Stopwatch />
   </React.StrictMode>,
   document.getElementById('root')
 );
