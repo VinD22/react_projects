@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import LeafletExample from './LeafletExample';
 import { Stopwatch } from './Stopwatch';
+import { ApiPractice } from './ApiPractice'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Stopwatch />
+    <ApiPractice />
   </React.StrictMode>,
   document.getElementById('root')
 );
