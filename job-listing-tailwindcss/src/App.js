@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello!</h1>
+      <h1 className="text-4xl">Hello!</h1>
       {jobs.length === 0 ? (
         <p>Fetchings jobs...</p>
       ) : (
