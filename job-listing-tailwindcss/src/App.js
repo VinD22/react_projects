@@ -15,7 +15,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-4xl">Hello!</h1>
+      <header className="bg-teal-500 mb-10 p-1">
+        <img src={`/images/bg-header-desktop.svg`} alt="background image" />
+      </header>
       {jobs.length === 0 ? (
         <p>Fetchings jobs...</p>
       ) : (
@@ -23,7 +25,6 @@ function App() {
             <JobBoardComponent job={job} key={job.id} />
           ))
         )}
-
     </div>
   );
 }
