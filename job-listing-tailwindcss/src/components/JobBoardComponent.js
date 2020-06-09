@@ -1,6 +1,6 @@
 import React from 'react'
 
-const JobBoardComponent = ({ job }) => {
+const JobBoardComponent = ({ job, handleFilterClick }) => {
 
     //const languagesAndTools = [...job.languages, ...job.tools];
 
@@ -23,10 +23,10 @@ const JobBoardComponent = ({ job }) => {
                 <p className="text-gray-700">{job.postedAt} · {job.contract} · {job.location}</p>
             </div>
             <div className="flex flex-wrap items-center mt-4 mx-4 pt-4 border-t border-gray-500 border-solid sm:ml-auto sm:border-0 sm:pt-0 sm:mt-0 ">
-                {languagesAndTools.map((lnt, index) => <span key={index} className="text-teal-500 bg-teal-100 font-bold mr-4 mb-4 p-2 rounded leading-3 sm:mb-0"> {lnt} </span>)}
+                {languagesAndTools.map((lnt, index) => <span key={index} onClick={() => handleFilterClick(lnt)} className="text-teal-500 bg-teal-100 font-bold mr-4 mb-4 p-2 rounded leading-3 sm:mb-0 cursor-pointer"> {lnt} </span>)}
             </div>
         </div>
     )
 }
 
-export default JobBoardComponent; 
+export default JobBoardComponent;
