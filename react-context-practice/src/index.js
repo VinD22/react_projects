@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { ThemeProvider } from './theme-context';
+
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeProvider value="dark">
     <App />
-  </React.StrictMode>,
+  </ThemeProvider>,
   document.getElementById('root')
 );
 

@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { ThemeContext } from '../theme-context'
 
 function setButtonColor(theme) {
     if (theme === 'dark') {
@@ -15,9 +17,11 @@ function setButtonColor(theme) {
 }
 
 const Button = (props) => {
+    const theme = useContext(ThemeContext);
+
     return (
         <div>
-            <button style={{ ...setButtonColor(props.theme), padding: 10, border: 'none', borderRadius: '5px' }}>{props.children}</button>
+            <button style={{ ...setButtonColor(theme), padding: 10, border: 'none', borderRadius: '5px' }}>{props.children}</button>
         </div>
     )
 }

@@ -7,7 +7,7 @@ const Form = () => {
         <div>
             <form onSubmit={(e) => e.preventDefault()}>
                 <input type="text" placeholder="Enter text" style={{ margin: '10px' }} />
-                <Button theme="dark">Form Submit Button</Button>
+                <Button>Form Submit Button</Button>
             </form>
         </div>
     )

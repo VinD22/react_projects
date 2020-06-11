@@ -10,7 +10,7 @@ const Nav = () => {
                 <li style={{ marginRight: '10px', color: 'white' }} className="li">About   </li>
                 <li style={{ marginRight: '10px', color: 'white' }} className="li">Contact Us   </li>
             </ul>
-            <Button theme="dark">Nav Button</Button>
+            <Button>Nav Button</Button>
         </div>
     )
 }
