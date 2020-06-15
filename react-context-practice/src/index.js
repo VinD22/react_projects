@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import PracticeRef from './components/PracticeRef';
+import CssPractice from './components/CssPractice';
 import * as serviceWorker from './serviceWorker';
 
 import { ThemeProvider } from './theme-context';
 
 ReactDOM.render(
   <ThemeProvider value="dark">
-    <PracticeRef />
+    <CssPractice />
   </ThemeProvider>,
   document.getElementById('root')
 );
