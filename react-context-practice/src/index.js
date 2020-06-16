@@ -4,13 +4,14 @@ import './index.css';
 import App from './App';
 import PracticeRef from './components/PracticeRef';
 import CssPractice from './components/CssPractice';
+import BorderBox from './components/BorderBox';
 import * as serviceWorker from './serviceWorker';
 
 import { ThemeProvider } from './theme-context';
 
 ReactDOM.render(
   <ThemeProvider value="dark">
-    <CssPractice />
+    <BorderBox />
   </ThemeProvider>,
   document.getElementById('root')
 );
