@@ -1,9 +1,14 @@
+
+
 .App {
   height: 100vh; 
   display: flex; 
+  flex-direction: column;
   justify-content: center;
   align-items: center; 
-  font-size: 5rem;
+  font-size: 2rem;
+  background-color: #fff5f3;
+  box-sizing: border-box;
 }
 
 p::before { 
@@ -22,4 +27,28 @@ p::after {
   position: absolute;   
   width: 10px; 
   height: 10px;
+} 
+
+.box { 
+  background-color: #fff;
+  padding: 40px 60px; 
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.box img { 
+  width: 50px;
+
+}
+
+.box::before { 
+  width: 220px;
+  height: 220px; 
+  border-radius: 39px;
+  background-color: #ff3d44;
+  bottom: -30px; 
+  right: -30px; 
+  height: 220px; 
+  width: 220px;
 }
