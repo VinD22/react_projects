@@ -20,6 +20,7 @@ const PostList = (props) => {
     )
 }
 
+// Using connect to get state from global state into the props. 
 const mapStateToProps = (state) => {
     return {
         posts: state.posts
