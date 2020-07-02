@@ -15,7 +15,7 @@ const Header = () => {
         <AppBar position="static">
             <Toolbar>
                 <Typography className={classes.typographyStyles}>
-                    Header
+                    Title
                 </Typography>
                 <AcUnitRoundedIcon />
             </Toolbar>
