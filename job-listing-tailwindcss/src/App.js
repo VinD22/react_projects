@@ -25,7 +25,6 @@ function App() {
 
   const handleFilterClick = (tag) => {
     if (filters.includes(tag)) {
-
     } else {
       setFilters([...filters, tag]);
     }
