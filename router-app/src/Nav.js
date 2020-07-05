@@ -10,7 +10,11 @@ function Nav() {
 
     return (
         <nav>
-            <h3>Logo</h3>
+            <h3>
+                <Link to="/" style={navStyle}>
+                    Router App
+                </Link>
+            </h3>
             <ul className="nav-links">
                 <Link to="/about" style={navStyle}>
                     <li>About</li>
