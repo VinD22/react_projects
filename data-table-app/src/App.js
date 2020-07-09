@@ -8,10 +8,19 @@ function App() {
 
       <h2>Data table app</h2>
       <table>
-        <th>Header</th>
+        <th style={{ backgroundColor: "#696969" }}>Header</th>
         <tr>
           Row 1
-          </tr>
+        </tr>
+        <tr>
+          Row 2
+        </tr>
+        <tr>
+          Row 3
+        </tr>
+        <tr>
+          Row 4
+        </tr>
       </table>
     </div >
   );
