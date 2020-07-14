@@ -6,14 +6,14 @@ function Todo({ todo, toggleTodo }) {
   }
 
   return (
-    <div>
-      <label>
+    <div style={{ padding: '5px', margin: "3px 0px" }}>
+      <label >
         <input
           type="checkbox"
           checked={todo.complete}
           onChange={handleSelectedOnChange}
         ></input>
-        {todo.name}
+        <span style={{ textTransform: "capitalize", color: '#696969' }}>{todo.name}</span>
       </label>
     </div>
   );

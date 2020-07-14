@@ -46,9 +46,10 @@ function App() {
     <>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
       <input type="text" ref={todoNameRef} />
-      <button onClick={handleAddToDo}> Add To Do </button>{" "}
-      <button onClick={handleClearTodos}> Clear Complete </button>
-      <div> {todos.filter(todo => !todo.complete).length} left to do </div>{" "}
+      <br />
+      <button style={{ margin: "10px 2px", backgroundColor: "#0f0", border: "none", color: 'black', padding: "5px" }} onClick={handleAddToDo}> Add To Do </button>
+      <button style={{ margin: "10px 2px", backgroundColor: "#f00", border: "none", color: 'white', padding: "5px" }} onClick={handleClearTodos}> Clear Complete </button>
+      <div> <span style={{ textTransform: "capitalize", color: '#696969' }}> {todos.filter(todo => !todo.complete).length} left to do</span> </div>
     </>
   );
 }
