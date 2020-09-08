@@ -3,7 +3,8 @@ import React from 'react';
 function Documentation() {
     return (
         <div>
-            <h1>Documenation Component</h1>
+            <h1>Documentation Component</h1>
+            <p>Anthony Sistilli React Tutorial, improving on React</p>
         </div>
     )
 }
