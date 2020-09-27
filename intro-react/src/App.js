@@ -7,14 +7,23 @@ function App() {
 
   const [count, setCount] = useState(0);
 
-  const textToDisplay = "https://www.youtube.com/playlist?list=PLQg6GaokU5CyvExiaMgXP_BS5WWNBfZJN"
+  const textToDisplay = "https://www.youtube.com/watch?v=SbwtUHxRej8&ab_channel=AnthonySistilli"
 
   return (
     <div className="App">
       {textToDisplay}
         Things to learn : JSX, props, states, useEffect, external libraries.
       <Documentation />
-      <Button onClick={() => setCount(count + 1)} />
+      <br />
+      <br /><br />
+
+      {count}
+      <br />
+      <br />
+      <button onClick={() => setCount(count + 1)} >Increment</button>
+      <br />
+      <br />
+      <button onClick={() => setCount(count - 1)} >Decrement</button>
     </div>
   );
 }
