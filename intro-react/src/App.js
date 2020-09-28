@@ -11,9 +11,8 @@ function App() {
 
   return (
     <div className="App">
-      {textToDisplay}
-        Things to learn : JSX, props, states, useEffect, external libraries.
-      <Documentation />
+      Things to learn : JSX, props, states, useEffect, external libraries.
+      <Documentation link={textToDisplay} />
       <br />
       <br /><br />
 
