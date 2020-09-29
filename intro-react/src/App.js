@@ -6,6 +6,8 @@ import Documentation from "./Documentation";
 function App() {
 
   const [count, setCount] = useState(0);
+  const cities = ["new york", "london", "california"];
+
 
   const textToDisplay = "https://www.youtube.com/watch?v=SbwtUHxRej8&ab_channel=AnthonySistilli"
 
@@ -23,7 +25,19 @@ function App() {
       <br />
       <br />
       <button onClick={() => setCount(count - 1)} >Decrement</button>
+      <br />
+      <br />
+      {
+        cities.map(city => {
+          return (
+            <p>{city}</p>
+          )
+        })
+      }
+
     </div>
+
+
   );
 }
 
