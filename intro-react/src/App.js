@@ -22,15 +22,13 @@ function App() {
       <br />
       <br />
       <button onClick={() => setCount(count + 1)} >Increment</button>
-      <br />
-      <br />
+    
       <button onClick={() => setCount(count - 1)} >Decrement</button>
-      <br />
-      <br />
+    
       {
-        cities.map(city => {
+        cities.map((city, index) => {
           return (
-            <p>{city}</p>
+            <p key={index}>{city}</p>
           )
         })
       }
