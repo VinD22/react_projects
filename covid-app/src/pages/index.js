@@ -5,7 +5,7 @@ import CountrySelector from '../components/CountrySelector';
 
 const GlobalStyle = createGlobalStyle`
   html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-family: Cantarell;
   }
 `;
 
