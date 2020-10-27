@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 body { 
-  margin: 0;
-  padding: 0;
+  margin: 2;
+  padding: 2;
   box-sizing: border-box;
   background-color: cornflowerblue;
-  color: white;
+  color: #ccc;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -17,17 +17,17 @@ body {
 }
 
 h2 { 
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 600;
   margin: 9px; 
 }
 
 h2 span { 
-  font-size: 32px;
+  font-size: 30px;
 }
 
 p { 
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .container > div { 
